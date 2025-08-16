@@ -18,8 +18,8 @@ If the `Build` folder is missing, open the project in Unity and create a build v
 ### Requirements
 - **Unity**: 2021.3 LTS or newer (2022/2023 LTS recommended)
 - **Packages/Deps**:
-- [**DOTween**](http://dotween.demigiant.com/)
-- **TextMeshPro** (Unity built‑in, for HUD text)
+  - [**DOTween**](http://dotween.demigiant.com/)
+  - **TextMeshPro** (Unity built‑in, for HUD text)
 
 ## Controls
 - **Keyboard**: `A` / `←` to move left; `D` / `→` to move right.
