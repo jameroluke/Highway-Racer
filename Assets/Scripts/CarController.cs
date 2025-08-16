@@ -42,7 +42,6 @@ public class CarController : MonoBehaviour {
             if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D)) {
                 Move(+1);
             }
-            CheckSwipe();
         }
     }
 
@@ -66,19 +65,6 @@ public class CarController : MonoBehaviour {
     }
 
     private void SnapToLane(int laneIndex) => transform.position = LanePosition(laneIndex);
-
-    private void CheckSwipe() {
-        if (Input.touchCount == 0) return;
-
-        var t = Input.GetTouch(0);
-        if (t.phase == TouchPhase.Began) _touchStart = t.position;
-        if (t.phase == TouchPhase.Ended) {
-            var delta = t.position - _touchStart;
-            if (Mathf.Abs(delta.x) > Mathf.Abs(delta.y) && Mathf.Abs(delta.x) > 50f) {
-                Move(delta.x > 0 ? +1 : -1);
-            }
-        }
-    }
 
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.TryGetComponent<Obstacle>(out var obstacle)) {

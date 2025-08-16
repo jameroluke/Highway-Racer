@@ -6,7 +6,6 @@ namespace Common {
         public static T Instance { get; private set; }
         public static bool IsInstantiated { get => Instance != null; }
 
-        // Don't override Awake. Override Init instead.
         private void Awake() {
             if (Instance != null) {
                 Debug.LogWarning("Multiple instances of " + typeof(T).ToString());
@@ -16,6 +15,6 @@ namespace Common {
             Instance.Init();
         }
 
-        protected virtual void Init() {}
+        protected virtual void Init() { }
     }
 }
