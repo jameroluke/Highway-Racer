@@ -6,7 +6,7 @@ If you just want to play the prebuilt version:
 
 - Open the `Build/` folder in the repo (some projects use `Builds/`).
 - **Windows:** run `HighwayRacer.exe`.
-- **macOS:** open `HighwayRacer.app` (you may need **Right-click → Open** the first time).
+- **macOS:** open `HighwayRacer.app` (If a Popup shows saying its not verified, You need to go to Settings > Privacy & Security > Scroll down and Allow Open).
 
 If the `Build` folder is missing, open the project in Unity and create a build via **File → Build Settings…** for your target platform.
 
