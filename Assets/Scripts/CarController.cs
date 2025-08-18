@@ -43,6 +43,7 @@ public class CarController : MonoBehaviour {
                 Move(+1);
             }
         }
+        CheckSwipe();
     }
 
     private void Move(int dir) {
@@ -56,6 +57,19 @@ public class CarController : MonoBehaviour {
 
         transform.DOKill();
         transform.DOMove(target, moveDuration).SetEase(ease);
+    }
+
+    void CheckSwipe() {
+        if (Input.touchCount == 0) return;
+
+        var t = Input.GetTouch(0);
+        if (t.phase == TouchPhase.Began) _touchStart = t.position;
+        if (t.phase == TouchPhase.Ended) {
+            var delta = t.position - _touchStart;
+            if (Mathf.Abs(delta.x) > Mathf.Abs(delta.y) && Mathf.Abs(delta.x) > 50f) {
+                Move(delta.x > 0 ? +1 : -1);
+            }
+        }
     }
 
     private Vector3 LanePosition(int laneIndex) {

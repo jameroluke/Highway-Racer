@@ -1367,7 +1367,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Move: A/D or Arrow Keys'
+  m_text: 'Move: A/D or Arrow Keys or Swipe left/right'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3f6896355ee18614b80cf713eda93270, type: 2}
   m_sharedMaterial: {fileID: -6338730930182999946, guid: 3f6896355ee18614b80cf713eda93270, type: 2}
